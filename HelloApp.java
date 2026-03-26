@@ -1,12 +1,18 @@
 public class HelloApp {
     public static void main(String[] args) {
-        // Concept: Check if the array has any items
         if (args.length > 0) {
-            // Concept: Join all elements in the args array with a comma and space
-            String names = String.join(", ", args);
+            String names = "";
+            // Use enhanced for loop to build the string
+            for (String name : args) {
+                names += name + ", ";
+            }
+            
+            // Concept: substring(startIndex, endIndex) 
+            // We remove the last 2 characters (the extra comma and space)
+            names = names.substring(0, names.length() - 2);
+            
             System.out.println("Hello, " + names + "!");
         } else {
-            // Default fallback
             System.out.println("Hello, World!");
         }
     }
