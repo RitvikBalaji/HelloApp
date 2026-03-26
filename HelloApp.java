@@ -1,11 +1,12 @@
 public class HelloApp {
     public static void main(String[] args) {
-        // Check if a command-line argument is provided
+        // Concept: Check if the array has any items
         if (args.length > 0) {
-            // Personalize the greeting with the first argument
-            System.out.println("Hello, " + args[0] + "!");
+            // Concept: Join all elements in the args array with a comma and space
+            String names = String.join(", ", args);
+            System.out.println("Hello, " + names + "!");
         } else {
-            // Default greeting if no argument is passed
+            // Default fallback
             System.out.println("Hello, World!");
         }
     }
